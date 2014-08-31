@@ -69,15 +69,15 @@ function notify(evt)
     var url = evt.target.getAttribute('id');
     var item = map.get(url);
     console.log(item);
-    if(item == null || item == 'gray')
+    if(item == null || item == 'black')
     {
         $("#"+url).css("fill","red");
         map.put(url,'red');
     }
     else
     {
-        $("#"+url).css("fill","gray");
-        map.put(url,"gray");
+        $("#"+url).css("fill","black");
+        map.put(url,"black");
     }
     calldb(url);
 }
@@ -88,10 +88,15 @@ function calldb(region){
         dataType: 'jsonp',
         jsonp: 'jsonp', // mongod is expecting the parameter name to be called "jsonp"
         success: function (data) {
-            console.log('success', data);
+            //console.log('success', data);
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            console.log('error', errorThrown);
+            //console.log('error', errorThrown);
         }
     });
+    var message = window.prompt("ID: "+region,'');
+    if(message != null)
+    {
+        console.log("ID: "+region+" is "+ message);
+    }
 }

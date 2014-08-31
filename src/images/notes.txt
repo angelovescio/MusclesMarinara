@@ -1,0 +1,1 @@
+mongoimport --host 192.168.2.8 --db muscles --collection musclegroups --jsonArray muscle_lists2.txt
