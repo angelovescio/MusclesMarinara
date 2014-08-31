@@ -83,20 +83,15 @@ function notify(evt)
 }
 function calldb(region){
     $.ajax({
-        url: 'http://192.168.2.8:28017/muscles/trainer1/?filter_muscle=pectoralis',
+        url: 'http://192.168.2.8:28017/muscles/musclegroups/?filter_path='+region,
         type: 'get',
         dataType: 'jsonp',
         jsonp: 'jsonp', // mongod is expecting the parameter name to be called "jsonp"
         success: function (data) {
-            //console.log('success', data);
+            console.log('success', data);
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            //console.log('error', errorThrown);
+            console.log('error', errorThrown);
         }
     });
-    var message = window.prompt("ID: "+region,'');
-    if(message != null)
-    {
-        console.log("ID: "+region+" is "+ message);
-    }
 }
