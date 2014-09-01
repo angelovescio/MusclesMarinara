@@ -1,1 +1,9 @@
-mongoimport --host 192.168.2.8 --db muscles --collection musclegroups --jsonArray muscle_lists2.txt
+mongoimport --host 192.168.2.8 --db muscles --collection musclegroups --jsonArray muscle_lists2.txt --ssl
+
+mongod --rest -sslMode requireSSL --sslPEMKeyFile /etc/ssl/mongodb.pem --dbpath /mnt/sdb1/ --jsonp
+
+export PATH=$PATH:/home/vesh/mongodb-src-r2.6.4\
+
+build mongo according to ssl instructions on website
+
+https://gist.github.com/mtigas/952344 <- creates the correct certificates, take out the -3des stuff to allow creation of the correct certs then cat the client key to the client cert

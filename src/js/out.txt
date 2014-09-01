@@ -1,0 +1,263 @@
+    1  ifconfig
+    2  sudo dhclient eth0
+    3  ifconfig
+    4  sudo dhclient eth0
+    5  ifconfig
+    6  sudo dhclient eth0
+    7  ifconfig
+    8  sudo dhclient eth0
+    9  killall -9 dhclient
+   10  sudo killall -9 dhclient
+   11  sudo dhclient eth0
+   12  ifconfig
+   13  sudo nano /etc/network/interfaces 
+   14  sudo reboot
+   15  sudo apt-get install mongodb
+   16  netstat -antup
+   17  sudo nano /etc/mongodb.conf 
+   18  sudo service mongodb restart
+   19  netstat -antup
+   20  mongo
+   21  netstat -antup
+   22  sudo nano /etc/init.d/mongodb 
+   23  sudo nano /etc/mongodb.conf 
+   24  sudo service mongodb restart
+   25  clear
+   26  sudo nano /etc/mongodb.conf 
+   27  sudo service mongodb restart
+   28  $ easy_install pymongo
+   29  sudo apt-get install python-setuptools 
+   30  git clone https://github.com/10gen-labs/sleepy.mongoose.git
+   31  sudo apt-get install git
+   32  git clone https://github.com/10gen-labs/sleepy.mongoose.git
+   33  sudo apt-get install pymongo
+   34  easy_install pymongo
+   35  sudo easy_install pymongo
+   36  cd sleepy.mongoose/
+   37  ls
+   38  python httpd.py 
+   39  nano httpd.py 
+   40  python httpd.py 
+   41  mongo
+   42  mongo --db muscles
+   43  mongo muscles
+   44  ifconfig
+   45  sudo apt-get install scons
+   46  sudo apt-get remove mongodb
+   47  sudo apt-get remove mongodb-*
+   48  scons mongo all --ssl
+   49  wget https://fastdl.mongodb.org/src/mongodb-src-r2.6.4.tar.gz
+   50  wget https://fastdl.mongodb.org/src/mongodb-src-r2.6.4.tar.gz --no-check-certificate
+   51  wget --no-check-certificate https://fastdl.mongodb.org/src/mongodb-src-r2.6.4.tar.gz
+   52  tar -zxvf mongodb-src-r2.6.4.tar.gz 
+   53  cd mongodb-src-r2.6.4/
+   54  ls
+   55  scons mongo all --ssl
+   56  sudo apt-get install g++
+   57  scons mongo all --ssl
+   58  sudo apt-get install openssl
+   59  sudo apt-get install libssl-dev 
+   60  scons mongo all --ssl
+   62  ls
+   63  ./mongod --help
+   64  ls
+   65  clear
+   66  cd /etc/ssl/
+   67  openssl req -newkey rsa:2048 -new -x509 -days 365 -nodes -out mongodb-cert.crt -keyout mongodb-cert.key
+   68  sudo openssl req -newkey rsa:2048 -new -x509 -days 365 -nodes -out mongodb-cert.crt -keyout mongodb-cert.key
+   69  sudo cat mongodb-cert.key mongodb-cert.crt > mongodb.pem
+   70  sudo cat mongodb-cert.key mongodb-cert.crt 
+   71  sudo cat mongodb-cert.key mongodb-cert.crt
+   72  sudo cat mongodb-cert.key mongodb-cert.crt > /home/vesh/mongodb.pem
+   73  cp /home/vesh/mongodb.pem .
+   74  sudo cp /home/vesh/mongodb.pem .
+   75  sudo nano /etc/mongodb.conf 
+   76  clear
+   77  ls /home/vesh/
+   78  ls /home/vesh/mongodb-src-r2.6.4
+   79  export PATH=$PATH:/home/vesh/mongodb-src-r2.6.4
+   80  locate mongod
+   81  mongod --help
+   82  mongod --rest -sslMode requireSSL
+   83  mongod --rest -sslMode requireSSL --sslPEMKeyFile /etc/ssl/mongodb.pem 
+   84  mongod --rest -sslMode requireSSL --sslPEMKeyFile /etc/ssl/mongodb.pem --dbpath /var/lib/mongodb/
+   85  sudo mongod --rest -sslMode requireSSL --sslPEMKeyFile /etc/ssl/mongodb.pem --dbpath /var/lib/mongodb/
+   86  mongod --rest -sslMode requireSSL --sslPEMKeyFile /etc/ssl/mongodb.pem --dbpath /var/lib/mongodb/
+   87  sudo rm /var/lib/mongodb/mongod.lock 
+   88  mongod --rest -sslMode requireSSL --sslPEMKeyFile /etc/ssl/mongodb.pem --dbpath /var/lib/mongodb/
+   89  sudo chown -R mongodb:mongodb /var/lib/mongodb/
+   90  mongod --rest -sslMode requireSSL --sslPEMKeyFile /etc/ssl/mongodb.pem --dbpath /var/lib/mongodb/
+   91  sudo chmod -R 777 /var/lib/mongodb/
+   92  mongod --rest -sslMode requireSSL --sslPEMKeyFile /etc/ssl/mongodb.pem --dbpath /var/lib/mongodb/
+   93  df
+   94  du /home/vesh/
+   95  du -h /home/vesh/
+   96  du -h /home/vesh/ | grep G
+   97  sudo bash
+   98  fdisk -l
+   99  fdisk /dev/sdb 
+  100  mkfs.ext4 /dev/sdb1 
+  101  mkdir /mnt/sdb1
+  102  moutn /dev/sdb1 /mnt/sdb1/
+  103  mount /dev/sdb1 /mnt/sdb1/
+  104  mongod --rest -sslMode requireSSL --sslPEMKeyFile /etc/ssl/mongodb.pem --dbpath /mnt/sdb1/
+  105  export PATH=$PATH:/home/vesh/mongodb-src-r2.6.4
+  106  mongod --rest -sslMode requireSSL --sslPEMKeyFile /etc/ssl/mongodb.pem --dbpath /mnt/sdb1/
+  107  mongod --rest -sslMode requireSSL --sslPEMKeyFile /etc/ssl/mongodb.pem --dbpath /mnt/sdb1/ --jsonp
+  108  mongoimport
+  109  export PATH=$PATH:/home/vesh/mongodb-src-r2.6.4
+  110  mongoimport
+  111  mongoimport --help
+  112  mongoimport --host 192.168.2.8 --db muscles --collection musclegroups --jsonArray muscle_lists2.txt --ssl
+  113  openssl x509 -in vesh.pem -inform PEM -subject -nameopt RFC2253
+  114  mongo
+  115  export PATH=$PATH:/home/vesh/mongodb-src-r2.6.4
+  116  mongo
+  117  mongo -ssl
+  118  mongo --host 192.168.2.8 -ssl
+  119  mongo --host 192.168.2.8/muscles -ssl
+  120  exit
+  121  cat /etc/ssl/server.pem > /etc/ssl/combined.pem
+  122  exit
+  123  cat /etc/ssl/server.pem >> /etc/ssl/combined.pem
+  124  exit
+  125  sudo bash
+  126  export PATH=$PATH:/home/vesh/mongodb-src-r2.6.4
+  127  mongo
+  128  mongo --ssl
+  129  mongo --ssl
+  130  mongo -ssl -sslPEMKeyFile vesh.pem 
+  131  mongo -ssl
+  132  mongo -ssl -sslPEMKeyFile vesh.pem 
+  133  mongo -ssl
+  134  mongo -ssl -sslPEMKeyFile vesh.pem 
+  135  sudo bashopenssl x509 -in vesh.pem -inform PEM -subject -nameopt RFC2253
+  136  openssl x509 -in vesh.pem -inform PEM -subject -nameopt RFC2253
+  137  mongoimport --host 192.168.2.8 --db muscles --collection musclegroups --jsonArray muscle_lists2.txt --ssl
+  138  nano client.cnf
+  139  openssl genrsa -out client.key 2048
+  140  openssl req -key client.key -new -out client.req
+  141  openssl x509 -req -days 365 -in client.req -signkey client.key -out client.crt -extfile client.cnf -extensions ssl_client
+  142  openssl x509 -text -noout -in client.crt
+  143  openssl x509 -in client.crt -out client.der -outform DER
+  144  openssl x509 -in client.der -inform DER -out client.pem -outform PEM
+  145  openssl x509 -in client.pem -inform PEM -subject -nameopt RFC2253
+  146  mongo -ssl -sslPEMKeyFile client.pem 
+  147  cat client.pem 
+  148  mongo -ssl -sslPEMKeyFile client.pem 
+  149  openssl x509 -inform RSA -in client.crt -out client2.pem -TEXT
+  150  openssl x509 -inform RSA -in client.crt -out client2.pem -text
+  151  openssl x509 -in client.crt -out client2.pem -text
+  152  mongo -ssl -sslPEMKeyFile client2.pem 
+  153  mongo --ssl --sslPEMKeyFile client2.pem 
+  154  mongo --ssl --sslPEMKeyFile client.pem 
+  155  mongo --ssl --sslPEMKeyFile vesh.pem 
+  156  openssl x509 -in vesh.pem -inform PEM -subject -nameopt RFC2253
+  157  mongo --ssl --sslPEMKeyFile vesh.pem 
+  158  history | grep vesh
+  159  openssl x509 -text -noout -in client.crt
+  160  mongo --ssl --sslPEMKeyFile vesh.pem 
+  161  ls /etc/ssl/
+  162  ls
+  163  cat mongodb.pem 
+  164  openssl pkcs12 -export -in me-cert.pem -inkey private/name-key.pem -certfile cacert.pem -name "[friendly name]" -out name-cert.p12
+  165  openssl req -new -nodes -out vesh-req.pem -keyout vesh-key.pem -days 365
+  166  openssl req -new -nodes -out vesh-req.pem -keyout vesh-key.pem -days 365  -extfile client.cnf -extensions ssl_client
+  167  openssl req -new -nodes -out vesh-req.pem -keyout vesh-key.pem -days 365  -extfile client.cnf
+  168  openssl req -new -nodes -out vesh-req.pem -keyout vesh-key.pem -days 365 -extfile client.cnf
+  169  openssl req -new -nodes -out vesh-req.pem -keyout vesh-key.pem -days 365
+  170  openssl ca -out vesh-cert.pem -days 365 -infiles vesh-req.pem
+  171  openssl ca -out vesh-cert.pem -days 365 -infiles vesh-req.pem -certfile mongodb.pem 
+  172  openssl ca -out vesh-cert.pem -days 365 -infiles vesh-req.pem -certfi
+  173  openssl genrsa -des3 -out client.key 1024
+  174  openssl genrsa -out client.key 1024
+  175  openssl req -key client.key -new -out client.req
+  176  openssl x509 -req -in client.req -CA mongodb.pem -out client.pem 
+  177  openssl req -out ca.pem -new -x509 
+  178  openssl genrsa -out server.key 1024 
+  179  openssl req -key server.key -new -out server.req
+  180  openssl x509 -req -in server.req -CA CA.pem -CAkey privkey.pem -CAserial file.srl -out server.pem 
+  181  openssl x509 -req -in server.req -CA ca.pem -CAkey privkey.pem -CAserial file.srl -out server.pem 
+  182  echo 00 > file.srl
+  183  openssl x509 -req -in server.req -CA ca.pem -CAkey privkey.pem -CAserial file.srl -out server.pem 
+  184  ord []:
+  185  An optional compaord []:
+  186  openssl genrsa -out client.key 1024 
+  187  openssl req -key client.key -new -out client.req
+  188  openssl x509 -req -in client.req -CA ca.pem -CAkey privkey.pem -CAserial file.srl -out client.pem
+  189  ls
+  190  ls -la
+  191  sudo cp ca.pem /etc/ssl/
+  192  sudo cp privkey.pem /etc/ssl/
+  193  sudo cp server.pem /etc/ssl/
+  194  cat server.pem 
+  195  cat ca.pem 
+  196  cat privkey.pem 
+  197  sudo cp server.key /etc/ssl/
+  198  nano /etc/mongodb.conf 
+  199  mongo --ssl --sslPEMKeyFile vesh.pem 
+  200  mongo --ssl --sslPEMKeyFile client.pem 
+  201  cat client.pem 
+  202  cat client.key 
+  203  cp client.key client_combined.pem
+  204  cat client.pem >> client_combined.pem
+  205  mongo --ssl --sslPEMKeyFile client_combined.pem 
+  206  openssl x509 -in client_combined.pem -inform PEM -subject -nameopt RFC2253
+  207  openssl req -key client.key -new -out client.req
+  208  openssl x509 -req -in client.req -CA ca.pem -CAkey privkey.pem -CAserial file.srl -out client.pem
+  209  cp client.key client_combined.pem
+  210  cat client.pem >> client_combined.pem
+  211  openssl x509 -in client_combined.pem -inform PEM -subject -nameopt RFC2253
+  212  mongo --ssl --sslPEMKeyFile client_combined.pem 
+  213  sudo nano /etc/mongodb.conf 
+  214  mongo --ssl --sslPEMKeyFile client_combined.pem 
+  215  openssl x509 -in client_combined.pem -inform PEM -subject -nameopt RFC2253
+  216  mongo --ssl --sslPEMKeyFile client_combined.pem -sslCAFile ca.pem 
+  217  mongo --ssl --sslPEMKeyFile client_combined.pem
+  218  openssl x509 -in vesh.pem -inform PEM -subject -nameopt RFC2253
+  219  mongo --ssl --sslPEMKeyFile vesh.pem 
+  220  opemssl pkcs12 -export -in client.crt -inkey client.key -out client_combined.pem
+  221  openssl pkcs12 -export -in client.crt -inkey client.key -out client_combined.pem
+  222  openssl pkcs12 -export -in client.pem -inkey client.key -out client_combined.pem
+  223  cat client_combined.pem 
+  224  clear
+  225  exit
+  226  file client_combined.pem 
+  227  openssl pkcs12 -export -in client.pem -inkey client.key -out client_combined.pem -nodes
+  228  file client_combined.pem 
+  229  file client.pem 
+  230  cat client.pem 
+  231  cat client.key 
+  232  cat client.crt 
+  233  ls -la
+  234  ls -tr
+  235  ls -trl
+  236  cat client_combined.pem 
+  237  clear
+  238  bash
+  239  exit
+  240  clear
+  241  ls -trl
+  242  openssl -in client.key -text > private.pem
+  243  openssl rsa -in client.key -text > private.pem
+  244  openssl x509 -inform PEM -in client.pem > public.pem
+  245  cat public.pem 
+  246  cat private.pem 
+  247  cat public.pem private.pem > client_combined.pem 
+  248  openssl x509 -in client_combined.pem -inform PEM -subject -nameopt RFC2253
+  249  mongo --ssl --sslPEMKeyFile client_combined.pem 
+  250  export PATH=$PATH:/home/vesh/mongodb-src-r2.6.4
+  251  mongo --ssl --sslPEMKeyFile client_combined.pem 
+  252  openssl pkcs12 -export -out client.pfx -inkey private.pem -in public.pem -certfile ca.pem 
+  253  nano client
+  254  nano client.pfx 
+  255  mongo --ssl --sslPEMKeyFile client_combined.pem 
+  256  history | grep combined
+  257  cat client_combined.pem 
+  258  openssl pkcs12 -export -out client.pfx -in client_combined.pem 
+  259  mongo --ssl --sslPEMKeyFile private.pem 
+  260  mongo --ssl --sslPEMKeyFile public.pem 
+  261  cat public.pem 
+  262  cat private.pem 
+  263  history | grep combined
+  264  history > out.txt

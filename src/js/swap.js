@@ -48,6 +48,7 @@ jQuery(document).ready(function() {
             // Add replaced image's ID to the new SVG
             if(typeof imgID !== 'undefined') {
                 $svg = $svg.attr('id', imgID);
+
             }
             // Add replaced image's classes to the new SVG
             if(typeof imgClass !== 'undefined') {
@@ -58,12 +59,44 @@ jQuery(document).ready(function() {
             $svg = $svg.removeAttr('xmlns:a');
             //add the onclick listener
             $svg = $svg.click(notify);
+            //attach the mouseover event to each path
+            $svg = $svg.on("mouseover", "path", entered);
+            $svg = $svg.on("mouseleave", "path", left);
+//            jQuery(data).find('path').each(function () {
+//              $(this.id).on("mouseover",function(){
+//                  console.log("HIT");
+//              });
+//            });
             // Replace image with new SVG
             $img.replaceWith($svg);
         });
 
     });
 });
+function entered(evt)
+{
+    var url = evt.target.getAttribute('id');
+    $.ajax({
+        url: 'https://192.168.2.8:28017/muscles/musclegroups/?filter_path='+url,
+        type: 'get',
+        dataType: 'jsonp',
+        jsonp: 'jsonp', // mongod is expecting the parameter name to be called "jsonp"
+        success: function (data) {
+            console.log('success', data);
+            $('#dialog').html(JSON.stringify(data));
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log('error', errorThrown);
+        }
+    });
+}
+function left(evt)
+{
+    var url = evt.target.getAttribute('id');
+    var item = map.get(url);
+    var myid = "#"+url;
+    console.log("Left "+evt.target.id);
+}
 function notify(evt)
 {
     var url = evt.target.getAttribute('id');
@@ -83,7 +116,7 @@ function notify(evt)
 }
 function calldb(region){
     $.ajax({
-        url: 'http://192.168.2.8:28017/muscles/musclegroups/?filter_path='+region,
+        url: 'https://192.168.2.8:28017/muscles/musclegroups/?filter_path='+region,
         type: 'get',
         dataType: 'jsonp',
         jsonp: 'jsonp', // mongod is expecting the parameter name to be called "jsonp"
