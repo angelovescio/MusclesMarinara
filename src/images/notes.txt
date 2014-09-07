@@ -7,3 +7,5 @@ export PATH=$PATH:/home/vesh/mongodb-src-r2.6.4\
 build mongo according to ssl instructions on website
 
 https://gist.github.com/mtigas/952344 <- creates the correct certificates, take out the -3des stuff to allow creation of the correct certs then cat the client key to the client cert
+
+get the workout animated gifs from here store url in website: http://exrx.net/WeightExercises/GluteusMaximus/BBDeadlift.html
